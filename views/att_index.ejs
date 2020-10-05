@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="/css/app.css" />
+</head>
+<body>
+    <h1>Welcome to The Attachment Page</h1>
+
+    <ul class='attachment'>
+        <% for (let i = 0; i < attachments.length; i++) { %>
+            <li>
+                <img src='<%=attachments[i].img%>'/><br/><br/>
+                Model Name: <a href='/attachment/<%=attachments[i].id%>'><%=attachments[i].modelName%></a>
+            </li>
+            <br/>
+        <% } %>
+    </ul>
+    <a href='/equipment'>Return to Equipment Page</a>
