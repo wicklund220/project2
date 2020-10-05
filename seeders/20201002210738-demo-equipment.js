@@ -2,15 +2,22 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+    await queryInterface.bulkInsert('Equipment', [{
+      division: 'agriculture',
+      modelName: '8RX',
+      application: 'row crop',
+      horsepower: 410,
+      description: 'row crop tractor',
+      img: ''
+    },
+    {
+      division: 'construction',
+      modelName: '1050K',
+      application: 'leveling',
+      horsepower: 500,
+      description: 'bull dozer',
+      img: ''
+    }], {});
   },
 
   down: async (queryInterface, Sequelize) => {
