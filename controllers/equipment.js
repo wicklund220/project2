@@ -15,6 +15,18 @@ const index = (req, res) => {
     })
 }
 
+const show = (req, res) => {
+    Equipment.findByPk(req.params.index, {
+        include: [Users]
+    })
+    .then(showEquipment => {
+        res.render('eq_show.ejs', {
+            equipment: showEquipment
+        })
+    })
+}
+
 module.exports = {
-    index
+    index,
+    show
 }

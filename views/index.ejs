@@ -9,7 +9,17 @@
 <body>
     <h1>Welcome to The John Deere App</h1>
 
-    
+    <ul class='equipment'>
+        <% for (let i = 0; i < equipment.length; i++) { %>
+            <li>
+                <img src='<%=equipment[i].img%>'/>
+                <br/>
+                <a href='/equipment/<%=equipment[i].id%>'><%=equipment[i].modelName%></a>
+                <br/>
+            </li>
+            <br/>
+        <% } %>
+    </ul>
 
     
 

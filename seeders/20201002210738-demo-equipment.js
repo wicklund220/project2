@@ -8,7 +8,7 @@ module.exports = {
       application: 'row crop',
       horsepower: 410,
       description: 'row crop tractor',
-      img: ''
+      img: 'https://i.imgur.com/b46ArPRm.jpg'
     },
     {
       division: 'construction',

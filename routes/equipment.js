@@ -4,7 +4,7 @@ const ctrl = require('../controllers');
 
 router.get('/', ctrl.equipment.index);
 // router.get('/new', ctrl.equipment.newFruit);
-// router.get('/:index', ctrl.equipment.show);
+router.get('/:index', ctrl.equipment.show);
 // router.get('/:index/edit', ctrl.equipment.edit);
 // router.post('/', ctrl.equipment.addFruit);
 // router.delete('/:index', ctrl.equipment.deleteFruit);

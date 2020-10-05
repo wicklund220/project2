@@ -1,3 +1,11 @@
 body {
-    color: red
+    color: green
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
