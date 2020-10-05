@@ -29,6 +29,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: new Date()
+      },
+      img: {
+        type: Sequelize.STRING
       }
     });
   },
