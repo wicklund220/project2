@@ -96,6 +96,38 @@ const userLogIn = (req, res) => {
     })
 }
 
+const renderEdit = (req, res) => {
+    Users.findByPk(req.params.index, {
+        include: [Equipment]
+    })
+    .then(editUser => {
+        Equipment.findAll()
+        .then(allEquipment => {
+            res.render('users/edit.ejs', {
+                users: editUser,
+                equipment: allEquipment
+            })
+        })
+    })
+}
+
+const editUser = (req, res) => {
+    Users.update(req.body, {
+        where: {id: req.params.index},
+        returning: true
+    })
+    .then(updatedUser => {
+        Equipment.findByPk(req.body.equipment)
+        .then(foundEquipment => {
+            Users.findByPk(req.params.index)
+            .then(foundUser => {
+                foundUser.addEquipment(foundEquipment);
+                res.redirect(`/users/profile/${req.params.index}`)
+            })
+        })
+    })
+}
+
 const deleteProfile = (req, res) => {
     Users.destroy({
         where: {id: req.params.index}
@@ -112,5 +144,7 @@ module.exports = {
     newUser,
     profile,
     userLogIn,
+    renderEdit,
+    editUser,
     deleteProfile
 }
