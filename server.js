@@ -12,6 +12,8 @@ app.use(methodOverride('_method'));
 
 app.use('/equipment', routes.equipment);
 
+app.use('/attachment', routes.attachment);
+
 app.use('/users', routes.users);
 
 app.use(express.static('public'));

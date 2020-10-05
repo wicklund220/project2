@@ -32,7 +32,7 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValeu: new Date()
+        defaultValue: new Date()
       },
       img: {
         type: Sequelize.STRING
