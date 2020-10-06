@@ -25,10 +25,38 @@ module.exports = {
     },
     {
       division: 'agriculture',
-      modelName: '2660VT',
-      application: 'Vertical tillage tool',
-      description: 'Multiseasonal tillage, turning over soil',
-      img: 'https://i.imgur.com/cZ5EXWhm.jpg'
+      modelName: 'N530F',
+      application: 'Air Drill',
+      description: 'Used for seeding small grain crops',
+      img: 'https://i.imgur.com/5leC5tlm.jpg'
+    },
+    {
+      division: 'agriculture',
+      modelName: 'N530F',
+      application: 'Air Drill',
+      description: 'Used for seeding small grain crops',
+      img: 'https://i.imgur.com/5leC5tlm.jpg'
+    },
+    {
+      division: 'agriculture',
+      modelName: 'Mobile RTK',
+      application: 'Satellite positioning',
+      description: 'Enables use of Autosteer for gps guided machinery',
+      img: 'https://i.imgur.com/njUI9Zf.jpg'
+    },
+    {
+      division: 'agriculture',
+      modelName: '1785',
+      application: 'Planter',
+      description: 'Row crop planter',
+      img: 'https://i.imgur.com/Gvl1FtP.jpg'
+    },
+    {
+      division: 'agriculture',
+      modelName: '1785',
+      application: 'Planter',
+      description: 'Row crop planter',
+      img: 'https://i.imgur.com/Gvl1FtP.jpg'
     },
   ], {});
   },
