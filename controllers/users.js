@@ -9,12 +9,16 @@ const renderSignUp = (req, res) => {
     dumbyUser = {
         name: '',
         username: ''
-    }
-    res.render('users/signup.ejs', {
-        users: dumbyUser,
-        msg: ''
+    }, Equipment.findAll()
+    .then (allEquip => {
+        res.render('users/signup.ejs', {
+            users: dumbyUser,
+            msg: '',
+            equipment: allEquip
+        })
     })
 }
+
 
 const renderLogIn = (req, res) => {
     dumbyUser = {
