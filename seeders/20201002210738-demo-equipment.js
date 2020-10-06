@@ -17,6 +17,22 @@ module.exports = {
       horsepower: 500,
       description: 'bull dozer',
       img: ''
+    },
+    {
+      division: 'agriculture',
+      modelName: '9RX',
+      application: '4wd/ Track Tractors',
+      horsepower: 620,
+      description: '4WD row crop tractor, heavy applications',
+      img: 'https://i.imgur.com/3TfJqZqm.jpg'
+    },
+    {
+      division: 'agriculture',
+      modelName: '2038R',
+      application: 'Compact Utility',
+      horsepower: 38,
+      description: 'Turf and Utility applications, property management',
+      img: 'https://i.imgur.com/kTbpfjAm.jpg'
     }], {});
   },
 

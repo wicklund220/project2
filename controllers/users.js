@@ -41,18 +41,27 @@ const newUser = (req, res) => {
     if(!req.body.password || req.body.password === '') {
         res.render('users/signup.ejs', {
             msg: 'Password required',
-            user: req.body
+            users: req.body
         })
     }
-    Users.create(req.body)
+    Users.create(req.body, {
+        include: [Equipment]
+    })
     .then(newUser => {
-        res.redirect(`/users/profile/${newUser.id}`)
+        Equipment.findByPk(req.body.equipment)
+        .then(foundEquipment => {
+            // Users.findByPk(req.params.index)
+            // .then(foundUser =>{
+                newUser.addEquipment(foundEquipment);
+                res.redirect(`/users/profile/${newUser.id}`)
+            })
+        // })
     })
     .catch(error => {
         if(error.name === 'SequelizeUniqueConstraintError') {
             res.render('users/signup.ejs', {
                 msg: 'Username taken',
-                user: req.body
+                users: req.body
             })
         } else {
             res.send('An unknown error occurred');
