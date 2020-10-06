@@ -16,7 +16,7 @@ module.exports = {
       application: 'leveling',
       horsepower: 500,
       description: 'bull dozer',
-      img: ''
+      img: 'https://i.imgur.com/LErmjV8.jpg'
     },
     {
       division: 'agriculture',
