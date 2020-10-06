@@ -1,3 +1,5 @@
+// const attachment = require('./attachment');
+
 const Equipment = require('../models').Equipment;
 const Users = require('../models').Users;
 const Attachment = require('../models').Attachment;
@@ -17,11 +19,15 @@ const index = (req, res) => {
 
 const show = (req, res) => {
     Equipment.findByPk(req.params.index, {
-        include: [Users]
+        include: [{model: Users},{model:Attachment}]
     })
     .then(showEquipment => {
-        res.render('eq_show.ejs', {
-            equipment: showEquipment
+        Attachment.findAll()
+        .then(foundAttachment =>{ console.log(foundAttachment)
+            res.render('eq_show.ejs', {
+                equipment: showEquipment,
+                attachment: foundAttachment
+            }) 
         })
     })
 }

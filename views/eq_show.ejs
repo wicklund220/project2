@@ -19,7 +19,13 @@
         </li>
     <% } %>
     <br/>
-    Compatable with: <br/>
+    Compatable with: 
+    <% for (let i=0; i < equipment.Attachments.length; i++) { %>
+        <li>
+            <%=equipment.Attachments[i].modelName%>
+        </li>
+    <% } %>
+    <br/><br/>
 
     <a href="/attachment"> Attachments Page</a><br/><br/>
 
