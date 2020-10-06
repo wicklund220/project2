@@ -22,7 +22,7 @@
     Compatable with: 
     <% for (let i=0; i < equipment.Attachments.length; i++) { %>
         <li>
-            <%=equipment.Attachments[i].modelName%>
+            <a href="/attachment/<%=equipment.Attachments[i].id%>" /> <%=equipment.Attachments[i].modelName%>
         </li>
     <% } %>
     <br/><br/>
