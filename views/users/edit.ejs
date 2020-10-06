@@ -14,21 +14,18 @@
         Location: <input type="text" name="location" value="<%=users.location%>"/><br/><br/>
         Description: <input type="text" name="description" value="<%=users.description%>"/><br/><br/>
         Upload Image: <input type="img" name="img" value="<%=users.img%>"/><br/><br/>
-        <input type='submit' value='Update Profile'> <br/><br/>
-        <h2>Owned Equipment</h2> 
+        <input type='submit' value='Update Profile'>  
             <% for(let i = 0; i < users.Equipment.length; i++) { %>   
                 <li>
                     <%=users.Equipment[i].modelName%> 
                 </li>
              <% } %>
                <br> 
-        <h2>Add Equipment to Operation</h2>
-               <% for(let i = 0; i < equipment.length; i++) { %>   
-                <li>
-                    <input type="checkbox" value = '<%= equipment[i].id %>'><%= equipment[i].modelName %> 
-                </li>
-             <% } %>
-               <br> 
+            
+             <select name="equipment"> 
+            <% for(let i = 0; i < equipment.length; i++) { %>   
+            <option value='<%= equipment[i].id %>'><%= equipment[i].modelName %></option>
+             <% } %></select>
     </form>
 </body>
 </html>

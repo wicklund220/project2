@@ -122,7 +122,7 @@ const editUser = (req, res) => {
             Users.findByPk(req.params.index)
             .then(foundUser => {
                 foundUser.addEquipment(foundEquipment);
-                res.redirect(`/users/profile/${req.params.index}/edit`)
+                res.redirect(`/users/profile/${req.params.index}`)
             })
         })
     })
