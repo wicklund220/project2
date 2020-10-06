@@ -58,6 +58,27 @@ module.exports = {
       description: 'Row crop planter',
       img: 'https://i.imgur.com/Gvl1FtP.jpg'
     },
+    {
+      division: 'Construction',
+      modelName: 'TR60B',
+      application: 'Trencher',
+      description: 'Used for quickly making trenches on the job site',
+      img: 'https://i.imgur.com/ya8apfg.jpg'
+    },
+    {
+      division: 'Construction',
+      modelName: 'HH80C',
+      application: 'Jack hammer',
+      description: 'Used for breaking up concrete or other hard objects',
+      img: 'https://i.imgur.com/MV11mDu.jpg'
+    },
+    {
+      division: 'Construction',
+      modelName: 'CP30E',
+      application: 'Cold Planer',
+      description: 'Asphault grinding and chipping',
+      img: 'https://i.imgur.com/9EjqjRi.jpg'
+    },
   ], {});
   },
 

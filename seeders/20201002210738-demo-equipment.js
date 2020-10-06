@@ -82,6 +82,14 @@ module.exports = {
       description: 'Used to harvest grain',
       img: 'https://i.imgur.com/6j7xpkQm.jpg'
     },
+    {
+      division: 'Construction',
+      modelName: '332G',
+      application: 'Skid Steer',
+      horsepower: 100,
+      description: 'General purpose machine used for scooping, digging, and many other tasks',
+      img: 'https://i.imgur.com/8YRNTS4.jpg'
+    }
   ], {});
   },
 
