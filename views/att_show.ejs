@@ -13,6 +13,12 @@
     Model Name: <%=attachment.modelName%><br/><br/>
     Application: <%=attachment.application%><br/><br/>
     Description: <%=attachment.description%><br/><br/>
+    <br/>
+    Compatable with: 
+        <li>
+            <a href="/equipment/<%=attachment.Equipment.id%>" /> <%=attachment.Equipment.modelName%>
+        </li>
+    <br/><br/>
     <a href="/attachment"> Return to Attachments Homepage</a><br/><br/>
     <a href="/equipment"> Return to Equipment Homepage</a><br/><br/>
 </body>

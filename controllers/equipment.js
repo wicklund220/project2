@@ -23,7 +23,7 @@ const show = (req, res) => {
     })
     .then(showEquipment => {
         Attachment.findAll()
-        .then(foundAttachment =>{ console.log(foundAttachment)
+        .then(foundAttachment =>{ 
             res.render('eq_show.ejs', {
                 equipment: showEquipment,
                 attachment: foundAttachment

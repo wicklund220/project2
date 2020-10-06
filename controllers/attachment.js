@@ -17,14 +17,30 @@ const index = (req, res) => {
 
 const show = (req, res) => {
     Attachment.findByPk(req.params.index, {
-        include: [Equipment]
-    })
-    .then(showAttachment => {
-        res.render('att_show.ejs', {
-           attachment: showAttachment
+            include: [Equipment]
         })
-    })
-}
+        .then(showAttachment => {
+            Equipment.findAll()
+            .then(foundEquipment =>{console.log(foundEquipment)
+                res.render('att_show.ejs', {
+                    equipment: foundEquipment,
+                    attachment: showAttachment
+                }) 
+            })
+        })
+    }
+
+
+
+//     Attachment.findByPk(req.params.index, {
+//         include: [Equipment]
+//     })
+//     .then(showAttachment => {
+//         res.render('att_show.ejs', {
+//            attachment: showAttachment
+//         })
+//     })
+// }
 
 module.exports = {
     index,
