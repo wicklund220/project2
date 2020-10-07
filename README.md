@@ -18,7 +18,7 @@ We began with a planning phase which consisted of creating a wireframe, ERD, and
 
 ### Wireframe
 
-![wireframe](https://i.imgur.com/THKD4Wu.png)
+![wireframe]()
 
 ### MVP
 
@@ -74,4 +74,4 @@ Stretch Goals
 10. As a customer I would like to see the equipment John Deere has to offer.
 
 ### ERD
-![ERD](https://files.slack.com/files-pri/TSHV6HCEB-F01C2V21TDK/image.png)
+![ERD](https://i.imgur.com/I89fjTks.png)
