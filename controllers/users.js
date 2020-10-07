@@ -183,7 +183,7 @@ const deleteProfile = (req, res) => {
     })
 }
 
-const removeEquipment = (req, res) => {     
+const removeEquipment = (req, res) => {    
     UserEquipment.destroy({
         where: {user_id: req.params.user_id, 
             equipment_id: req.params.equipment_id}
