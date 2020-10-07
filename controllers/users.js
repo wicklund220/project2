@@ -143,41 +143,36 @@ const editUser = (req, res) => {
             Equipment.findByPk(req.body.equipment)
                 .then(foundEquipment => {
                     Users.findByPk(req.params.index)
-                    .then(foundUser => {
+                    .then(foundUser => {console.log(foundUser)
                         foundUser.addEquipment(foundEquipment);
                         res.redirect(`/users/profile/${foundUser.id}/edit`)
                     })
                 })
             }
-        else {
+        else if (typeof(req.body.equipment) === "object"){
             for(let i = 0; i < req.body.equipment.length; i++) {
                 Equipment.findByPk(req.body.equipment[i])
                 .then(foundEquipment => {
                     Users.findByPk(req.params.index)
-                    .then(foundUser => {
+                    .then(foundUser => {console.log(foundUser)
                         foundUser.addEquipment(foundEquipment);
                         res.redirect(`/users/profile/${foundUser.id}/edit`)
                     })
                 })
             }
+        } else { 
+                    Equipment.findByPk(req.body.equipment)
+                    .then(foundEquipment => {
+                        Users.findByPk(req.params.index)
+                        .then(foundUser => {
+                            foundUser.addEquipment(foundEquipment);
+                            res.redirect(`/users/profile/${foundUser.id}/edit`)
+                        })
+                    })
+                }
+            })
+
         }
-    })
-}
-
-
-
-
-//     .then(updatedUser => {
-//         Equipment.findByPk(req.body.equipment)
-//         .then(foundEquipment => {
-//             Users.findByPk(req.params.index)
-//             .then(foundUser => {
-//                 foundUser.addEquipment(foundEquipment);
-//                 res.redirect(`/users/profile/${req.params.index}`)
-//             })
-//         })
-//     })
-// }
 
 const deleteProfile = (req, res) => {
     Users.destroy({
@@ -205,7 +200,7 @@ const opUser = (req, res) => {
     })
     .then(foundUsers => {
         Equipment.findAll()
-        .then(foundEquipment => {console.log(foundEquipment)
+        .then(foundEquipment => {
             res.render('users/op_index.ejs', {
                 users: foundUsers,
                 equipment: foundEquipment 
