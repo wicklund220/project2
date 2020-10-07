@@ -4,6 +4,8 @@
 ### Description
 This app was developed to familiarize users with John Deere Equipment, while allowing them to set up and organize their operation on the site. Once they have signed up they can view and edit their information, visit the equipment show page, the attachments show page, or view other operations. The equipment show page is linked to the attachments page to show compatible attachments for all equipment. The equipment is also linked to users so that a user can see who owns a specific piece of equipment, and a list of the equipment they own in their operation as well.
 
+Link to page: http://the-john-deere-app.herokuapp.com/users
+
 ### Technologies Used
 Technologies used:
 - MVC
@@ -18,7 +20,15 @@ We began with a planning phase which consisted of creating a wireframe, ERD, and
 
 ### Wireframe
 
-![wireframe]()
+![Profile page wireframe](https://i.imgur.com/4DYmiAP.png)
+
+![Equipment index page wireframe](https://i.imgur.com/vdo8ZqE.png)
+
+![Equipment show page wireframe](https://i.imgur.com/7ayM5ld.png)
+
+![Attachment index page wireframe](https://i.imgur.com/FySnh1I.png)
+
+![Attachment show page wireframe](https://i.imgur.com/7ayM5ld.png)
 
 ### MVP
 
