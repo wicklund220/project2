@@ -11,7 +11,8 @@ router.post('/login', ctrl.users.userLogIn);
 router.get('/profile/:index/edit', ctrl.users.renderEdit)
 router.put('/profile/:index', ctrl.users.editUser);
 router.delete('/profile/:index', ctrl.users.deleteProfile);
-router.delete('/profile/:index/edit', ctrl.users.removeEquipment);
+router.delete('/profile/:equipment_id/:user_id', ctrl.users.removeEquipment);
+router.get('/op_index', ctrl.users.opUser);
 
 
 module.exports = router;

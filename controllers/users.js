@@ -122,7 +122,7 @@ const renderEdit = (req, res) => {
     Users.findByPk(req.params.index, {
         include: [Equipment]
     })
-    .then(editUser => {
+    .then(editUser => { 
         Equipment.findAll()
         .then(allEquipment => {
             res.render('users/edit.ejs', {
@@ -159,12 +159,24 @@ const deleteProfile = (req, res) => {
     })
 }
 
-const removeEquipment = (req, res) => {
+const removeEquipment = (req, res) => {     
     UserEquipment.destroy({
-        where: {id: req.params.index}
+        where: {user_id: req.params.user_id, 
+            equipment_id: req.params.equipment_id}
     })
     .then(() => {
-        res.redirect(`/users/profile/${req.params.index}/edit`)
+        res.redirect(`/users/profile/${req.params.user_id}/edit`)
+    })
+}
+
+const opUser = (req, res) => {
+    Users.findAll( {
+        order: ['description']
+    })
+    .then(foundUsers => {
+        res.render('users/op_index.ejs', {
+            users: foundUsers
+        })
     })
 }
 
@@ -178,5 +190,6 @@ module.exports = {
     renderEdit,
     editUser,
     deleteProfile,
-    removeEquipment
+    removeEquipment,
+    opUser
 }

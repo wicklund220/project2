@@ -15,20 +15,22 @@
         Description: <input type="text" name="description" value="<%=users.description%>"/><br/><br/>
         Upload Image: <input type="img" name="img" value="<%=users.img%>"/><br/><br/>
         <input type='submit' value='Update Profile'>  
-            <% for(let i = 0; i < users.Equipment.length; i++) { %>   
-                <li>
-                    <%=users.Equipment[i].modelName%> 
-                    <form action='/equipment/<%=users.Equipment[i].id%>?_method=DELETE' method='POST'>
-                        <input type='submit' value='Remove Equipment from Profile' />
-                    </form>
-                </li>
-             <% } %>
-               <br> 
+           
+        
+            
             
              <select name="equipment" multiple size = "12"> 
             <% for(let i = 0; i < equipment.length; i++) { %>   
             <option value='<%= equipment[i].id %>'><%= equipment[i].modelName %></option>
              <% } %></select>
     </form>
+    <% for(let i = 0; i < users.Equipment.length; i++) { %>   
+        <li>
+            <%=users.Equipment[i].modelName%> 
+            <form action='/users/profile/<%=users.Equipment[i].id%>/<%=users.id%>?_method=DELETE' method='POST'>
+                <input type='submit' value='Remove Equipment from Profile' />
+            </form>
+        </li>
+     <% } %>
 </body>
 </html>
