@@ -74,4 +74,4 @@ Stretch Goals
 10. As a customer I would like to see the equipment John Deere has to offer.
 
 ### ERD
-![ERD](https://i.imgur.com/I89fjTks.png)
+![ERD](https://i.imgur.com/I89fjTk.png)
