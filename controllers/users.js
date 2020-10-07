@@ -139,16 +139,45 @@ const editUser = (req, res) => {
         returning: true
     })
     .then(updatedUser => {
-        Equipment.findByPk(req.body.equipment)
-        .then(foundEquipment => {
-            Users.findByPk(req.params.index)
-            .then(foundUser => {
-                foundUser.addEquipment(foundEquipment);
-                res.redirect(`/users/profile/${req.params.index}`)
-            })
-        })
+        if (typeof(req.body.equipment) === "string"){
+            Equipment.findByPk(req.body.equipment)
+                .then(foundEquipment => {
+                    Users.findByPk(req.params.index)
+                    .then(foundUser => {
+                        foundUser.addEquipment(foundEquipment);
+                        res.redirect(`/users/profile/${foundUser.id}/edit`)
+                    })
+                })
+            }
+        else {
+            for(let i = 0; i < req.body.equipment.length; i++) {
+                Equipment.findByPk(req.body.equipment[i])
+                .then(foundEquipment => {
+                    Users.findByPk(req.params.index)
+                    .then(foundUser => {
+                        foundUser.addEquipment(foundEquipment);
+                        res.redirect(`/users/profile/${foundUser.id}/edit`)
+                    })
+                })
+            }
+        }
     })
 }
+
+
+
+
+//     .then(updatedUser => {
+//         Equipment.findByPk(req.body.equipment)
+//         .then(foundEquipment => {
+//             Users.findByPk(req.params.index)
+//             .then(foundUser => {
+//                 foundUser.addEquipment(foundEquipment);
+//                 res.redirect(`/users/profile/${req.params.index}`)
+//             })
+//         })
+//     })
+// }
 
 const deleteProfile = (req, res) => {
     Users.destroy({

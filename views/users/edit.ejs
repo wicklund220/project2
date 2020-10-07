@@ -14,15 +14,13 @@
         Location: <input type="text" name="location" value="<%=users.location%>"/><br/><br/>
         Description: <input type="text" name="description" value="<%=users.description%>"/><br/><br/>
         Upload Image: <input type="img" name="img" value="<%=users.img%>"/><br/><br/>
-        <input type='submit' value='Update Profile'>  
-           
-        
-            
             
              <select name="equipment" multiple size = "12"> 
             <% for(let i = 0; i < equipment.length; i++) { %>   
             <option value='<%= equipment[i].id %>'><%= equipment[i].modelName %></option>
-             <% } %></select>
+             <% } %></select><br/><br>
+
+             <input type='submit' value='Update Profile'> 
     </form>
     <% for(let i = 0; i < users.Equipment.length; i++) { %>   
         <li>
