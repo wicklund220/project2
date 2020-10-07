@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 
 const app = express();
@@ -18,6 +20,6 @@ app.use('/users', routes.users);
 
 app.use(express.static('public'));
 
-app.listen(3003, () => {
-    console.log('listening on port 3003');
+app.listen(process.env.PORT, () => {
+    console.log(`listening on port 3003${process.env.PORT}`);
 })
