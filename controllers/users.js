@@ -171,11 +171,16 @@ const removeEquipment = (req, res) => {
 
 const opUser = (req, res) => {
     Users.findAll( {
-        order: ['description']
+        order: ['description'],
+        include: [Equipment]
     })
     .then(foundUsers => {
-        res.render('users/op_index.ejs', {
-            users: foundUsers
+        Equipment.findAll()
+        .then(foundEquipment => {console.log(foundEquipment)
+            res.render('users/op_index.ejs', {
+                users: foundUsers,
+                equipment: foundEquipment 
+            })
         })
     })
 }

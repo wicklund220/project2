@@ -12,7 +12,12 @@
                     Name: <%=users[i].name%> <br/>
                     Location: <%=users[i].location%> <br/>
                     Occupation: <%=users[i].description%> <br/>
-                   
+                    Equipment: <% for (let j=0; j < users[i].Equipment.length; j++) {%>
+                        <li>
+                            <%=users[i].Equipment[j].modelName%> <br/>
+                        </li>
+                        <br/>
+                    <% } %>
                 </li>
                 <br/>
         <% } %>
