@@ -18,11 +18,14 @@
             <% for(let i = 0; i < users.Equipment.length; i++) { %>   
                 <li>
                     <%=users.Equipment[i].modelName%> 
+                    <form action='/equipment/<%=users.Equipment[i].id%>?_method=DELETE' method='POST'>
+                        <input type='submit' value='Remove Equipment from Profile' />
+                    </form>
                 </li>
              <% } %>
                <br> 
             
-             <select name="equipment"> 
+             <select name="equipment" multiple size = "12"> 
             <% for(let i = 0; i < equipment.length; i++) { %>   
             <option value='<%= equipment[i].id %>'><%= equipment[i].modelName %></option>
              <% } %></select>

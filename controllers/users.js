@@ -1,5 +1,6 @@
 const Users = require('../models').Users;
 const Equipment = require('../models').Equipment;
+const UserEquipment = require('../models').userEquipment;
 
 const index = (req, res) => {
     res.render('users/index.ejs')
@@ -48,14 +49,22 @@ const newUser = (req, res) => {
         include: [Equipment]
     })
     .then(newUser => {
-        Equipment.findByPk(req.body.equipment)
-        .then(foundEquipment => {
-            // Users.findByPk(req.params.index)
-            // .then(foundUser =>{
-                newUser.addEquipment(foundEquipment);
-                res.redirect(`/users/profile/${newUser.id}`)
-            })
-        // })
+        if (typeof(req.body.equipment) === "string"){
+            Equipment.findByPk(req.body.equipment)
+            .then(foundEquipment => {
+                    newUser.addEquipment(foundEquipment);
+                    res.redirect(`/users/profile/${newUser.id}`)
+                })
+        } 
+        else {
+            for(let i = 0; i < req.body.equipment.length; i++) {
+                Equipment.findByPk(req.body.equipment[i])
+                .then(foundEquipment => {
+                        newUser.addEquipment(foundEquipment);
+                        res.redirect(`/users/profile/${newUser.id}`)
+                    })
+            }
+        }
     })
     .catch(error => {
         if(error.name === 'SequelizeUniqueConstraintError') {
@@ -150,6 +159,15 @@ const deleteProfile = (req, res) => {
     })
 }
 
+const removeEquipment = (req, res) => {
+    UserEquipment.destroy({
+        where: {id: req.params.index}
+    })
+    .then(() => {
+        res.redirect(`/users/profile/${req.params.index}/edit`)
+    })
+}
+
 module.exports = {
     index,
     renderSignUp,
@@ -159,5 +177,6 @@ module.exports = {
     userLogIn,
     renderEdit,
     editUser,
-    deleteProfile
+    deleteProfile,
+    removeEquipment
 }

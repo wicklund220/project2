@@ -9,19 +9,18 @@
 <body>
     <h1>Welcome <%=users.name%></h1>
     Username: <%=users.username%><br/><br/>
-    Password: <%=users.password%><br/><br/>
 
     <a href='<%=users.id%>/edit'>Edit Profile</a><br/>
 
     <%=users.img%><br/>
-    <%=users.location%><br/><br/>
-    <%=users.description%><br/><br/>
+    Location: <%=users.location%><br/><br/>
+    Occupation: <%=users.description%><br/><br/>
     User Owned Equipment: 
     <% for (let i=0; i < users.Equipment.length; i++) {%>
         <li>
-            
-            <a href="/equipment/<%=users.Equipment[i].id%>" /> <%=users.Equipment[i].modelName%>
-        </li><br/>
+             <a href="/equipment/<%=users.Equipment[i].id%>" /> <%=users.Equipment[i].modelName%> <br/>
+        </li>
+        <br/>
     <% } %>
     <a href='/equipment'>See all Equipment</a><br/><br/>
     <a href='/attachment'>See all Attachments</a><br/><br/>
