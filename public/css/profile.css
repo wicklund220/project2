@@ -1,5 +1,4 @@
 body {
-
     text-align: center;
     margin:0px;
     min-height: 100%;
@@ -16,9 +15,6 @@ a {
 img {
    width: 45%;
    height: 30%;
-}
-div{
-   display: inline
 }
 h1 {
    background-color: lightgrey;
@@ -45,7 +41,15 @@ footer {
 }
 .profile {
     float: right;
+    margin: 75px 50px;
+    border: 5px solid black;
 }
 li {
     list-style: none;
+}
+.info {
+    border: 5px solid black;
+    background-color: lightgrey;
+    width: 40%;
+    margin: 50px, 50px;
 }
