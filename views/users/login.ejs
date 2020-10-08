@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel ="stylesheet" href="/css/app.css" />
+    <link rel ="stylesheet" href="/css/signup_login.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Login</h1>
-    <%=msg%>
+    <img class="ex" src="https://i.imgur.com/VSYTfi9.jpg" />
+    <div class="login">
     <form action="/users/login" method="POST">
+        <%=msg%> <br/><br>
         Username: <input type="text" name="username" value=''/></br><br/>
         Password: <input type="text" name="password" value=''/></br><br/>
+        
         <input type ="submit" name="" value="Log in" />
     </form>
+    </div>
+    <footer>
+        <img id="logo" src="https://i.imgur.com/bxF7QSr.png" />
+        <p>Created by: Nels WickLund & Camden Yoder</p>
+        <p>John Deere App</p>
+    </footer>
 </body>
 </html>
