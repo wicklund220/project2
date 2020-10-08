@@ -6,15 +6,18 @@
     <link rel="icon" href="https://i.imgur.com/bxF7QSr.png">
     <title>John Deere App</title>
     <link rel="stylesheet" href="/css/eq_att_show.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Equipment Show Page</h1>
-    <img src='<%=equipment.img%>'/> <br/>
-    Division: <%=equipment.division%><br/>
-    Model: <%=equipment.modelName%> <br/>
-    Horsepower: <%=equipment.horsepower%> <br/>
-    Application: <%=equipment.application%> <br/>
-    Description: <%=equipment.description%> <br/>
+    <h1><%=equipment.modelName%></h1>
+    <img class='equipment' src='<%=equipment.img%>'/>
+<div class='info'>
+    <br/>
+    Division: <%=equipment.division%><br/><br/>
+    Model: <%=equipment.modelName%> <br/><br/>
+    Horsepower: <%=equipment.horsepower%> <br/><br/>
+    Application: <%=equipment.application%> <br/><br/>
+    Description: <%=equipment.description%> <br/><br/>
     Belongs to: 
     <% for (let i=0; i < equipment.Users.length; i++) { %>
         <li>
@@ -22,17 +25,20 @@
         </li>
     <% } %>
     <br/>
-    Compatable with: 
+    Compatable with: <br/><br/>
     <% for (let i=0; i < equipment.Attachments.length; i++) { %>
         <li>
-            <a href="/attachment/<%=equipment.Attachments[i].id%>" /> <%=equipment.Attachments[i].modelName%>
+            <a href="/attachment/<%=equipment.Attachments[i].id%>"> <%=equipment.Attachments[i].modelName%></a>
         </li>
+        <br/><br/>
     <% } %>
     <br/><br/>
 
-    <a href="/attachment"> Attachments Page</a><br/><br/>
+    <a href="/attachment"> Attachments Page</a><br/><br/><br/>
 
-    <a href="/equipment"> Return to Equipment Homepage</a>
+    <a href="/equipment"> Return to Equipment Homepage</a><br/><br/><br/>
+</div>
+   
 
     <footer>
         <img id="logo" src="https://i.imgur.com/bxF7QSr.png" />
