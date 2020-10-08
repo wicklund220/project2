@@ -13,10 +13,7 @@ a {
    border: 5px solid yellow;
    border-radius: 5px;
 }
-img {
-   width: 35vw;
-   height: 30vw;
-}
+
 h1 {
    background-color: lightgrey;
    color: black;
@@ -27,7 +24,7 @@ h1 {
 #logo{
    height: 3%;
    width: 3%;
-   padding-bottom: 5px; 
+   padding-bottom: 15px; 
 }
 footer {
    display: flex;
@@ -44,6 +41,8 @@ footer {
     float: right;
     margin: 75px 60px 75px 10px;
     border: 5px solid black;
+    width: 35vw;
+    height: 30vw;
 }
 li {
     list-style: none;
