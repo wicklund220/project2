@@ -28,8 +28,8 @@ h1 {
     /* width: 100%; */
 }
 #logo{
-    height: 3%;
-    width: 3%;
+    height: 20px;
+    width: 20px;
     padding-bottom: 5px; 
 }
 footer {
@@ -39,7 +39,7 @@ footer {
     background: lightgrey;
     margin: 100px 0px 0px 0px;
     padding: 4px;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 98.7%;
 }

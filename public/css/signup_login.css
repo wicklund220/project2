@@ -71,9 +71,9 @@ h1 {
     padding: 20px;
 }
 #logo{
-    height: 3%;
-    width: 3%;
-    padding-bottom: 5px;
+    height: 20px;
+    width: 20px;
+    padding-bottom: 5px; 
 }
 footer {
     grid-row: 3;
@@ -84,7 +84,7 @@ footer {
     background: lightgrey;
     margin: 100px 0px 0px 0px;
     padding: 4px;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 99.5%;
 }

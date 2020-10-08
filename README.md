@@ -1,6 +1,9 @@
 # Project2
 ### Project 2 | John Deere App
 
+### Link to The John Deere App
+http://the-john-deere-app.herokuapp.com/users
+
 ### Description
 This app was developed to familiarize users with John Deere Equipment, while allowing them to set up and organize their operation on the site. Once they have signed up they can view and edit their information, visit the equipment show page, the attachments show page, or view other operations. The equipment show page is linked to the attachments page to show compatible attachments for all equipment. The equipment is also linked to users so that a user can see who owns a specific piece of equipment, and a list of the equipment they own in their operation as well.
 

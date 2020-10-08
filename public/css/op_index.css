@@ -35,9 +35,9 @@ h1 {
 }
 
  #logo{
-    height: 3%;
-    width: 3%;
-    padding-bottom: 15px; 
+    height: 40px;
+    width: 40px;
+    padding-bottom: 5px; 
  }
 
  footer {
@@ -54,4 +54,11 @@ h1 {
 
 .buttons {
     text-align: center;
+}
+
+.gif {
+    float: right;
+    margin: 50px 100px 0px 0px;
+    width: 50vw;
+    height: 35vw;
 }
