@@ -5,26 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://i.imgur.com/bxF7QSr.png">
     <title>John Deere App</title>
+    <link rel ="stylesheet" href="/css/op_index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+    <h1>John Deere User Operation Directory</h1>
     <ul class='op'>
         <% for (let i = 0; i < users.length; i++) { %>
                 <li>
                     Name: <%=users[i].name%> <br/>
                     Location: <%=users[i].location%> <br/>
                     Occupation: <%=users[i].description%> <br/>
-                    Equipment: <% for (let j=0; j < users[i].Equipment.length; j++) {%>
+                    Equipment: <br/><br/>
+                    <% for (let j=0; j < users[i].Equipment.length; j++) {%>
                         <li>
-                            <a href="/equipment/<%=users[i].Equipment[j].id%>"/> <%=users[i].Equipment[j].modelName%> </a><br/>
+                            <a class='equipment' href="/equipment/<%=users[i].Equipment[j].id%>"/> <%=users[i].Equipment[j].modelName%> </a> 
                         </li>
-                        <br/>
+                        &emsp;
+                      
                     <% } %>
                 </li>
-                <br/>
+                <br/><br/>
         <% } %>
     </ul>
-    <a href='/equipment'>See all Equipment</a><br/><br/>
-    <a href='/attachment'>See all Attachments</a><br/><br/>
+    <br/><br/>
+    <div class='buttons'>
+        <a href='/equipment'>See all Equipment</a><br/><br/><br/>
+        <a href='/attachment'>See all Attachments</a><br/><br/><br/><br/><br/><br/>
+    </div>
+   
 
     <footer>
         <img id="logo" src="https://i.imgur.com/bxF7QSr.png" />

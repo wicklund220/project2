@@ -1,5 +1,5 @@
 body {
-    text-align: center;
+    /* text-align: center; */
     margin:0px;
     min-height: 100%;
     width: 100%;
@@ -8,14 +8,21 @@ body {
 
 h1 {
     background-color: lightgrey;
+    text-align: center;
     color: black;
     margin: 0px 0px;
     padding: 20px;
     /* width: 100%; */
  }
 
+ .op {
+     /* margin: 0px 50% 0px 50%; */
+     margin-left: 40px;
+ }
+
  li {
      list-style: none;
+     display: inline;
  }
 
  a {
@@ -25,25 +32,7 @@ h1 {
     padding: 5px;
     border: 5px solid yellow;
     border-radius: 5px;
- }
-
- .green {
-    text-decoration: none;
-    color: yellow;
-    background: green;
-    padding: 5px;
-    border: 5px solid yellow;
-    border-radius: 5px;
- }
-
- .black {
-    text-decoration: none;
-    color: black;
-    background: #e9da0a;
-    padding: 5px;
-    border: 5px solid black;
-    border-radius: 5px;
- }
+}
 
  #logo{
     height: 3%;
@@ -63,29 +52,6 @@ h1 {
     width: 100%;
  }
 
- .agriculture {
-     background: green;
-     padding: 15px;
- }
-
- .construction {
-    background: #e9da0a;
-    padding: 15px;
+.buttons {
+    text-align: center;
 }
-
- .left {
-     float: left;
-     width: 50%;
-     margin-left: -20px;
- }
-
- .right {
-     float: right;
-     width: 50%;
-     margin-right: 20px;
- }
-
- .machine {
-    width: 35vw;
-    height: 25vw;
- }
