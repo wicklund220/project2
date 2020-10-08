@@ -1,0 +1,51 @@
+body {
+
+    text-align: center;
+    margin:0px;
+    min-height: 100%;
+    width: 100%;
+}
+a {
+   text-decoration: none;
+   color: yellow;
+   background: green;
+   padding: 5px;
+   border: 5px solid yellow;
+   border-radius: 5px;
+}
+img {
+   width: 45%;
+   height: 30%;
+}
+div{
+   display: inline
+}
+h1 {
+   background-color: lightgrey;
+   color: black;
+   margin: 0px 0px;
+   padding: 20px;
+   /* width: 100%; */
+}
+#logo{
+   height: 3%;
+   width: 3%;
+   padding-bottom: 5px; 
+}
+footer {
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-end;
+   background: lightgrey;
+   margin: 100px 0px 0px 0px;
+   padding: 4px;
+   position: absolute;
+   bottom: 0px;
+   width: 98.7%;
+}
+.profile {
+    float: right;
+}
+li {
+    list-style: none;
+}
