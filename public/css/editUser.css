@@ -1,0 +1,82 @@
+body {
+    text-align: center;
+    margin:0px;
+    min-height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+a {
+   text-decoration: none;
+   color: yellow;
+   background: green;
+   padding: 5px;
+   border: 5px solid yellow;
+   border-radius: 5px;
+}
+
+h1 {
+   background-color: lightgrey;
+   color: black;
+   margin: 0px 0px;
+   padding: 20px;
+}
+#logo{
+   height: 3%;
+   width: 3%;
+   padding-bottom: 15px; 
+}
+footer {
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-end;
+   background: lightgrey;
+   margin: 100px 0px 0px 0px;
+   padding: 4px;
+   position: absolute;
+   bottom: 0px;
+   width: 98.7%;
+}
+.profile {
+    float: right;
+    margin: 75px 60px 75px 10px;
+    border: 5px solid black;
+    width: 35vw;
+   height: 30vw;
+}
+li {
+    list-style: none;
+}
+.info {
+    border: 5px solid black;
+    background-color: lightgrey;
+    width: 40%;
+    margin: 75px 10px 75px 60px;
+    float: left;
+}
+
+.delete {
+   color: yellow;
+   background: green;
+   padding: 5px;
+   border: 5px solid yellow;
+   border-radius: 5px;
+   font-size: 16px;
+}
+
+.own {
+   border: 3px solid black;
+   margin: 0px 20px 20px 20px;
+}
+
+.remove {
+    float: right;
+}
+
+.elim {
+    background: red; 
+    color: yellow;
+    padding: 5px;
+    border: 5px solid yellow;
+    border-radius: 5px;
+    font-size: 16px;
+}

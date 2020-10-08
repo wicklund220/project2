@@ -5,34 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://i.imgur.com/bxF7QSr.png">
     <title>John Deere App</title>
+    <link rel='stylesheet' href='/css/editUser.css'>
 </head>
 <body>
     <h1>Edit Profile</h1>
-    <form action='/users/profile/<%=users.id%>?_method=PUT' method='POST'>
-        Name: <input type="text" name="name" value="<%=users.name%>" /><br/><br/>
-        Username: <input type="text" name="username" value="<%=users.username%>"/><br/><br/>
-        Password: <input type="text" name="password" value="<%=users.password%>"/><br/><br/>
-        Location: <input type="text" name="location" value="<%=users.location%>"/><br/><br/>
-        Description: <input type="text" name="description" value="<%=users.description%>"/><br/><br/>
-        Upload Image: <input type="text" name="img" value="<%=users.img%>"/><br/><br/>
-        <img src="<%=users.img%>" alt="picture of user" /> <br/><br/>
-
-             <select name="equipment" multiple size = "12"> 
-            <% for(let i = 0; i < equipment.length; i++) { %>   
-            <option value='<%= equipment[i].id %>'><%= equipment[i].modelName %></option>
-             <% } %></select><br/><br>
-
-             <input type='submit' value='Update Profile'> 
-    </form>
-    <% for(let i = 0; i < users.Equipment.length; i++) { %>   
-        <li>
-            <%=users.Equipment[i].modelName%> 
-            <form action='/users/profile/<%=users.Equipment[i].id%>/<%=users.id%>?_method=DELETE' method='POST'>
-                <input type='submit' value='Remove Equipment from Profile' />
-            </form>
-        </li>
-     <% } %>
-     <a href='/users/profile/<%=users.id%>'>Return to Profile Page</a><br/>
+    <div class='remove'>
+    <img class='profile' src="<%=users.img%>" alt="picture of user" /> <br/><br/>
+    
+            Your Equipment:<br/><br/>
+            <% for(let i = 0; i < users.Equipment.length; i++) { %>   
+            <li>
+                <%=users.Equipment[i].modelName%> 
+                <form action='/users/profile/<%=users.Equipment[i].id%>/<%=users.id%>?_method=DELETE' method='POST'>
+                    <input class='elim' type='submit' value='Remove Equipment from Profile' />
+                </form>
+            </li>
+            <br/><br/>
+         <% } %>
+     
+    </div>
+    <div class='info'>
+        <form action='/users/profile/<%=users.id%>?_method=PUT' method='POST'>
+            <br/><br/>
+            Name: <input type="text" name="name" value="<%=users.name%>" /><br/><br/>
+            Username: <input type="text" name="username" value="<%=users.username%>"/><br/><br/>
+            Password: <input type="text" name="password" value="<%=users.password%>"/><br/><br/>
+            Location: <input type="text" name="location" value="<%=users.location%>"/><br/><br/>
+            Description: <input type="text" name="description" value="<%=users.description%>"/><br/><br/>
+            Upload Image: <input type="text" name="img" value="<%=users.img%>"/><br/><br/>
+    
+                 <select name="equipment" multiple size = "6"> 
+                <% for(let i = 0; i < equipment.length; i++) { %>   
+                <option value='<%= equipment[i].id %>'><%= equipment[i].modelName %></option>
+                 <% } %></select><br/><br>
+    
+                 <input class='delete' type='submit' value='Update Profile'> <br/><br/><br/>
+        </form>
+       
+        
+         <a href='/users/profile/<%=users.id%>'>Return to Profile Page</a><br/><br/><br/>
+    </div>
+    
 
      <footer>
         <img id="logo" src="https://i.imgur.com/bxF7QSr.png" />
