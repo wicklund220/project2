@@ -20,7 +20,7 @@
         Location: <input type="text" name="location" required/><br/><br/>
         Occupation: <input type="text" name="description" required/><br/><br/>
         Upload Image URL: <input type="img" name="img" /><br/><br/>
-        Select Your Equipment (hold command to select multiple):
+        Select Your Equipment <br/>(hold command to select multiple):<br/><br/>
         <select name="equipment" multiple size = "6"> 
             <% for(let i = 0; i < equipment.length; i++) { %>   
             <option value='<%= equipment[i].id %>'><%= equipment[i].modelName %></option>
