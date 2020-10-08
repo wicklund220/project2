@@ -5,21 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://i.imgur.com/bxF7QSr.png">
     <title>John Deere App</title>
-    <link rel ="stylesheet" href="/css/app.css" />
+    <link rel ="stylesheet" href="/css/eq_att_index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to The Attachment Page</h1>
-
-    <ul class='attachment'>
-        <% for (let i = 0; i < attachment.length; i++) { %>
-            <li>
-                <img src='<%=attachment[i].img%>'/><br/><br/>
-                Model Name: <a href='/attachment/<%=attachment[i].id%>'><%=attachment[i].modelName%></a>
-            </li>
-            <br/>
-        <% } %>
-    </ul>
-    <a href='/equipment'>Return to Equipment Page</a>
+    <h1>Welcome to The John Deere Attachment Page</h1>
+    <div class='left'><br/>
+        <ul class='ag'>
+        Agriculture<br/><br/>
+            <% for (let i = 0; i < attachment.length; i++) { %>
+                <% if (attachment[i].division === 'Agriculture') { %> 
+                    <li class='agriculture'>
+                        <img class='machine' src='<%=attachment[i].img%>'/>
+                        <br/><br/>
+                        <a class='green' href='/attachment/<%=attachment[i].id%>'><%=attachment[i].modelName%></a>
+                        <br/><br/>
+                    </li>
+                    <br/>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
+    <div class='right'><br/>
+        <ul class='con'>
+        Construction <br/><br/>
+            <% for (let i = 0; i < attachment.length; i++) { %>
+                <% if (attachment[i].division === 'Construction') { %> 
+                    <li class='construction'>
+                        <img class='machine' src='<%=attachment[i].img%>'/>
+                        <br/><br/>
+                        <a class='black' href='/attachment/<%=attachment[i].id%>'><%=attachment[i].modelName%></a>
+                        <br/><br/>
+                    </li>
+                    <br/>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
+    <a href='/equipment'>Return to Equipment Page</a><br/><br/><br/>
+    <a href='/users/op_index'>See other user's operations!</a>
 
     <footer>
         <img id="logo" src="https://i.imgur.com/bxF7QSr.png" />

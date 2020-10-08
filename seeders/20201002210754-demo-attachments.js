@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
       await queryInterface.bulkInsert('Attachments', [{
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: '440R',
       application: 'Tractor',
       description: 'utility loading purposes',
@@ -11,7 +11,7 @@ module.exports = {
       equipment_attachment_id: 4
     },
     {
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: 'HD50R',
       application: 'Draper Platform',
       description: 'Used on a combine for harvesting small grains',
@@ -19,7 +19,7 @@ module.exports = {
       equipment_attachment_id: 10
     },
     {
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: 'C18F',
       application: 'Corn head',
       description: 'Used on a combine for harvesting corn',
@@ -27,7 +27,7 @@ module.exports = {
       equipment_attachment_id: 10
     },
     {
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: 'N530F',
       application: 'Air Drill',
       description: 'Used for seeding small grain crops',
@@ -35,7 +35,7 @@ module.exports = {
       equipment_attachment_id: 3
     },
     {
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: 'Mobile RTK',
       application: 'Satellite positioning',
       description: 'Enables use of Autosteer for gps guided machinery',
@@ -43,7 +43,7 @@ module.exports = {
       equipment_attachment_id: 1
     },
     {
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: '1785',
       application: 'Planter',
       description: 'Row crop planter',

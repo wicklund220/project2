@@ -12,6 +12,7 @@
     <h1>Welcome to The John Deere Equipment Page</h1>
     <div class='left'>
         <ul class='ag'>
+            Agriculture <br/><br/>
             <% for (let i = 0; i < equipment.length; i++) { %>
                 <% if (equipment[i].division === 'Agriculture') { %> 
                     <li class='agriculture'>
@@ -27,6 +28,7 @@
     </div>
     <div class='right'>
         <ul class='con'>
+            Construction <br/><br/>
             <% for (let i = 0; i < equipment.length; i++) { %>
                 <% if (equipment[i].division === 'Construction') { %> 
                     <li class='construction'>
@@ -41,8 +43,8 @@
         </ul>
     </div>
 
-    <a class='attachment' href="/attachment"> Attachments Page</a><br/><br/><br/>
-
+    <a  href="/attachment"> Attachments Page</a><br/><br/><br/>
+    <a  href='/users/op_index'>See other user's operations!</a>
     <footer>
         <img id="logo" src="https://i.imgur.com/bxF7QSr.png" />
         <p>Created by: Nels Wicklund & Camden Yoder</p>
