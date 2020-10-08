@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('Equipment', [{
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: '8RX',
       application: 'row crop',
       horsepower: 410,
@@ -11,7 +11,7 @@ module.exports = {
       img: 'https://i.imgur.com/b46ArPRm.jpg'
     },
     {
-      division: 'construction',
+      division: 'Construction',
       modelName: '1050K',
       application: 'leveling',
       horsepower: 500,
@@ -19,7 +19,7 @@ module.exports = {
       img: 'https://i.imgur.com/LErmjV8.jpg'
     },
     {
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: '9RX',
       application: '4wd/ Track Tractors',
       horsepower: 620,
@@ -27,7 +27,7 @@ module.exports = {
       img: 'https://i.imgur.com/3TfJqZqm.jpg'
     },
     {
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: '2038R',
       application: 'Compact Utility',
       horsepower: 38,
@@ -35,7 +35,7 @@ module.exports = {
       img: 'https://i.imgur.com/kTbpfjAm.jpg'
     },
     {
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: '6250R',
       application: 'Utility',
       horsepower: 250,
@@ -43,7 +43,7 @@ module.exports = {
       img: 'https://i.imgur.com/uHV4o5om.jpg'
     },
     {
-      division: 'agriculture',
+      division: 'Agriculture',
       modelName: '5115ML',
       application: 'Specialty',
       horsepower: 115,

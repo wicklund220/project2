@@ -7,7 +7,7 @@ const Attachment = require('../models').Attachment;
 const index = (req, res) => {
     Equipment.findAll({
         order: [
-            ['division']
+            ['division'],['modelName']
         ]
     })
     .then(foundEquipment => {

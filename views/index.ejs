@@ -5,23 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://i.imgur.com/bxF7QSr.png">
     <title>John Deere App</title>
-    <link rel ="stylesheet" href="/css/app.css" />
+    <link rel ="stylesheet" href="/css/eq_att_index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to The John Deere App</h1>
+    <h1>Welcome to The John Deere Equipment Page</h1>
+    <div class='left'>
+        <ul class='ag'>
+            <% for (let i = 0; i < equipment.length; i++) { %>
+                <% if (equipment[i].division === 'Agriculture') { %> 
+                    <li class='agriculture'>
+                        <img class='machine' src='<%=equipment[i].img%>'/>
+                        <br/><br/>
+                        <a class='green' href='/equipment/<%=equipment[i].id%>'><%=equipment[i].modelName%></a>
+                        <br/><br/>
+                    </li>
+                    <br/>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
+    <div class='right'>
+        <ul class='con'>
+            <% for (let i = 0; i < equipment.length; i++) { %>
+                <% if (equipment[i].division === 'Construction') { %> 
+                    <li class='construction'>
+                        <img class='machine' src='<%=equipment[i].img%>'/>
+                        <br/><br/>
+                        <a class='black' href='/equipment/<%=equipment[i].id%>'><%=equipment[i].modelName%></a>
+                        <br/><br/>
+                    </li>
+                    <br/>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
 
-    <ul class='equipment'>
-        <% for (let i = 0; i < equipment.length; i++) { %>
-            <li>
-                <img src='<%=equipment[i].img%>'/>
-                <br/>
-                <a href='/equipment/<%=equipment[i].id%>'><%=equipment[i].modelName%></a>
-                <br/>
-            </li>
-            <br/>
-        <% } %>
-        <a href="/attachment"> Attachments Page</a>
-    </ul>
+    <a class='attachment' href="/attachment"> Attachments Page</a><br/><br/><br/>
 
     <footer>
         <img id="logo" src="https://i.imgur.com/bxF7QSr.png" />
